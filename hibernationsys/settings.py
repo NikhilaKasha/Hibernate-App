@@ -56,6 +56,7 @@ MIDDLEWARE = [
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -145,10 +146,13 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '1030515953718-ej7d0b7vmr0cq04u5ceu77pbgcnhg97u.apps.googleusercontent.com'
-
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'ZoaBK3u67L0nBuexG_Zgbeig'
+SOCIAL_AUTH_FACEBOOK_KEY = '558873631401683'
+SOCIAL_AUTH_FACEBOOK_SECRET = '210a5936bca23b5e206cef8ef32e5f93'
 
 LOGIN_URL = '/auth/login/google-oauth2/'
+LOGOUT_URL= '/home'
+LOGIN_URL = '/auth/login/facebook/'
 LOGOUT_URL= '/home'
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
