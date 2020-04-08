@@ -1,0 +1,63 @@
+{% extends 'app2/base.html' %}
+<!--{% load static %}-->
+{% block title %}Home{% endblock title %}
+{% block content %}
+
+{% if user.is_authenticated %}
+<div class="page-container">
+
+    <h3 class="top-menu">Hello {{ user.username }},</h3>
+
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="links">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="{% static 'images/customer.jpg' %}" alt="Customers"/>
+
+                            <div class="caption">
+                                <h3>Customer</h3>
+<!--                                <p>We see our success in our customers success </p>-->
+                                <p><a class="btn btn-info" href="{% url 'app2:customer_list' %}"
+                                      role="button">View
+                                    details </a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="{% static 'images/Services.png' %}" alt="Services"/>
+                            <div class="caption">
+                                <h3>Services</h3>
+<!--                                <p>Great Services</p>-->
+                                <p><a class="btn btn-info" href="{% url 'app2:service_list' %}"
+                                      role="button">View
+                                    details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="{% static 'images/Expert.png' %}" alt="Expert"/>
+                            <div class="caption">
+                                <h3>Expert</h3>
+<!--                                <p>Hi</p>-->
+                                <p><a class="btn btn-info" href="{% url 'app2:expert_list' %}"
+                                      role="button">View
+                                    details</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+{% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

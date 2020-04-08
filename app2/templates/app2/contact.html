@@ -1,0 +1,14 @@
+{% extends 'app2/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Contact - Hibernate {{ block.super }}{% endblock %}
+
+
+{% block content %}
+<h2>Contact Hibernate</h2>
+<form role="form" action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Send</button>
+</form>
+
+{% endblock %}

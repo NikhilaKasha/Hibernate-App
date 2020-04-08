@@ -1,0 +1,21 @@
+{% extends "app2/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <div class ="content-section">
+        <form method="POST" class="client-form col-lg-4">
+
+        {% csrf_token %}
+        <fieldset class="form-group">
+           <legend class="border-bottom mb-4 ">  </legend>
+            {{ form|crispy }}
+         </fieldset>
+         <div class="form-group">
+             <button class="btn btn-primary" type="submit" >Login</button>
+             <a href="{% url 'password_reset' %}">Forgot pass?</a>
+             <button class="btn btn-primary"  href="{% url 'social:begin' 'google-oauth2' %}">
+                 Login </button>
+         </div>
+       </form>
+    </div>
+{% endblock %}

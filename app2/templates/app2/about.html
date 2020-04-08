@@ -1,0 +1,37 @@
+{% extends "app2/base.html" %}
+{% load static %}
+<!--{% load static from static %}-->
+{% load admin_static %}
+
+
+{% block title %}Hibenate{% endblock %}
+
+{% block content %}
+<style>
+
+    .aboutus {
+      position:static;
+            margin:0;
+        right: 0;
+        padding:0;
+      max-width: 100px;
+
+
+        height: 200px;
+
+        }
+
+
+</style>
+
+                                    <div class="aboutus">
+                                        <img src="{% app2/static "images/maverick.jpg" %}" alt="maverick"/>
+                                         </div>
+
+
+    <h1>Hibernate</h1>
+
+    <p>xyz </p>
+
+
+{% endblock %}
